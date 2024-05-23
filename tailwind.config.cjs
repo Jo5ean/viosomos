@@ -15,9 +15,9 @@ module.exports = {
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
-      primary: "#9333EA",
-      secondary: "#ff7e33",
-      info: "#0C63E7",
+      primary: "#00BDA4", // Turquesa claro
+      secondary: "#3EB58D", // Verde agua
+      info: "#01A99C", // Turquesa oscuro
       black: colors.black,
       white: colors.white,
       slate: colors.slate,

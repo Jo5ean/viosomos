@@ -1,0 +1,196 @@
+---
+import Container from "./Container.astro"
+---
+
+<div id="empresa">
+  <Container>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Primera columna con imagen, título y texto -->
+      <div class="p-4 text-lg font-semibold text-black dark:text-white">
+          <div class="flex items-center space-x-3">
+              <img src="/somos.png" alt="Somos" class="h-12 w-12">
+              <h1 class="text-2xl font-bold">Quienes somos:</h1>
+          </div>
+          <p class="mt-4">
+              Somos una asociación de profesionales, conformamos un equipo
+              interdisciplinario pro activo y altamente calificado.
+          </p>
+          <p class="mt-2">
+              Nuestra consultora tiene como objetivo crear soluciones a las
+              necesidades empresariales y emprendimientos de diferentes
+              actividades. Nos actualizamos constantemente para brindar
+              herramientas y soluciones múltiples con resultados eficaces y eficientes.
+          </p>
+          <p class="mt-2">
+              Estamos comprometidos profesionalmente con la responsabilidad social
+              y la sustentabilidad del medio ambiente (desarrollo sostenible).
+          </p>
+      </div>
+  
+      <!-- Segunda columna con formulario -->
+      <div class="flex items-center justify-center p-4">
+          <form role="form" id="pedidoinfo" method="post" enctype="multipart/form-data" action="/postulantes_mail1.php" autocomplete="on"
+                class="bg-gray-200 rounded-lg p-2 shadow-md m-1 w-full max-w-lg">
+  
+              <h2 class="text-lg font-semibold mb-2 text-center">Obtenga Asesoramiento</h2>
+              
+              <!-- Campos del formulario -->
+              <div class="mb-2">
+                  <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre y Apellido*</label>
+                  <input type="text" name="nombre" id="nombre" required class="mt-1 p-1 w-full border-gray-300 rounded-md" />
+              </div>
+  
+              <div class="mb-2">
+                  <label for="email" class="block text-sm font-medium text-gray-700">E-mail*</label>
+                  <input type="email" name="email" id="email" required class="mt-1 p-1 w-full border-gray-300 rounded-md" />
+              </div>
+  
+              <div class="mb-2">
+                  <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono/celular*</label>
+                  <input type="text" name="telefono" id="telefono" required class="mt-1 p-1 w-full border-gray-300 rounded-md" />
+              </div>
+  
+              <div class="mb-2">
+                  <label for="asunto" class="block text-sm font-medium text-gray-700">Asunto*</label>
+                  <input type="text" name="asunto" id="asunto" required class="mt-1 p-1 w-full border-gray-300 rounded-md" />
+              </div>
+  
+              <div class="mb-4">
+                  <label for="mensaje" class="block text-sm font-medium text-gray-700">Mensaje*</label>
+                  <textarea name="mensaje" id="mensaje" rows="3" required class="mt-1 p-1 w-full border-gray-300 rounded-md"></textarea>
+              </div>
+  
+              <div class="flex justify-center mt-1">
+                <button type="submit" class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+                    <span class="relative text-sm font-semibold text-white">Enviar mensaje</span>
+                </button>
+            </div>
+          </form>
+      </div>
+  </div>
+  
+  
+    
+
+    <!-- <div
+      class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4"
+    >
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png"
+            class="w-12"
+            width="512"
+            height="512"
+            alt="burger illustration"
+          />
+
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
+            >
+              First feature
+            </h5>
+            <p class="text-gray-600 dark:text-white">
+              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+            </p>
+          </div>
+          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
+            <span class="text-sm">Read more</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>                
+          </a>
+        </div>
+      </div>
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341134.png"
+            class="w-12"
+            width="512"
+            height="512"
+            alt="burger illustration"
+          />
+
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
+            >
+              Second feature
+            </h5>
+            <p class="text-gray-600 dark:text-white">
+              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+            </p>
+          </div>
+          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
+            <span class="text-sm">Read more</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>                
+          </a>
+        </div>
+      </div>
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png"
+            class="w-12"
+            width="512"
+            height="512"
+            alt="burger illustration"
+          />
+
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
+            >
+              Third feature
+            </h5>
+            <p class="text-gray-600 dark:text-white">
+              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+            </p>
+          </div>
+          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
+            <span class="text-sm">Read more</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>                
+          </a>
+        </div>
+      </div>
+      <div
+        class="group relative bg-gray-50 dark:bg-gray-900 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
+      >
+        <div
+          class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341025.png"
+            class="w-12"
+            width="512"
+            height="512"
+            alt="burger illustration"
+          />
+
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
+            >
+              More features
+            </h5>
+            <p class="text-gray-600 dark:text-white">
+              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+            </p>
+          </div>
+          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
+            <span class="text-sm">Read more</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>                
+          </a>
+        </div>
+      </div>
+    </div> -->
+  </Container>
+</div>
