@@ -1,6 +1,5 @@
 ---
 import Container from "./Container.astro"
-
 ---
 
 <div class="relative py-16">
@@ -11,69 +10,26 @@ import Container from "./Container.astro"
   <Container>
     <div class="relative">
       <div class="flex items-center justify-center -space-x-2">
-        <img
-          loading="lazy"
-          width="400"
-          height="400"
-          src="./images/avatars/avatar.webp"
-          alt="member photo"
-          class="h-8 w-8 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src="./images/avatars/avatar-2.webp"
-          alt="member photo"
-          class="h-12 w-12 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src="./images/avatars/avatar-3.webp"
-          alt="member photo"
-          class="z-10 h-16 w-16 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src="./images/avatars/avatar-4.webp"
-          alt="member photo"
-          class="relative h-12 w-12 rounded-full object-cover"
-        />
-        <img
-          loading="lazy"
-          width="200"
-          height="200"
-          src="./images/avatars/avatar-1.webp"
-          alt="member photo"
-          class="h-8 w-8 rounded-full object-cover"
-        />
+        <!-- Se reemplazan las imágenes de avatares con imágenes representativas de las áreas de actividad -->
+        <img loading="lazy" width="400" height="400" src="./areas/mineras.png" alt="Empresas Mineras" class="h-7 w-7 object-cover" />
+        <img loading="lazy" width="200" height="200" src="./areas/construccion.png" alt="Construccion" class="h-8 w-8 object-cover" />
+        <img loading="lazy" width="200" height="200" src="./areas/servicios-mineros.png" alt="Servicios Mineros y Petroleros" class="z-10 h-12 w-12 object-cover" />
+        <img loading="lazy" width="200" height="200" src="./areas/emprendimientos.png" alt="Emprendimientos" class="z-10 h-16 w-16 object-cover" />
+        <img loading="lazy" width="200" height="200" src="./areas/comerciales.png" alt="Empresas Comerciales" class="relative h-12 w-12 object-cover" />
+        <img loading="lazy" width="200" height="200" src="./areas/educativas.png" alt="Instituciones Educativas" class="h-8 w-8 object-cover" />
+        <img loading="lazy" width="200" height="200" src="./areas/petroleras.png" alt="Empresas Petroleras" class="h-7 w-7 object-cover" />
       </div>
       <div class="mt-6 m-auto space-y-6 md:w-8/12 lg:w-7/12">
-        <h1 class="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">Get Started now</h1>
+        <h1 class="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">Únete a Nuestra Consultora</h1>
         <p class="text-center text-xl text-gray-600 dark:text-white">
-          Be part of millions people around the world using tailus in modern User Interfaces.
+          Sé parte de la transformación económica y el desarrollo sostenible con soluciones innovadoras.
         </p>
         <div class="flex flex-wrap justify-center gap-6">
-          <a
-              href="#"
-              class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-            >
-              <span class="relative text-base font-semibold text-white dark:text-dark"
-                >Get Started</span
-              >
-            </a>
-            <a
-              href="#"
-              class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
-            >
-              <span
-                class="relative text-base font-semibold text-primary dark:text-white"
-                >More about</span
-              >
+          <a href="#" class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+            <span class="relative text-base font-semibold text-white dark:text-dark">Contáctanos</span>
+          </a>
+          <a href="#" class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max">
+            <span class="relative text-base font-semibold text-primary dark:text-white">Conoce más</span>
           </a>
         </div>
       </div>

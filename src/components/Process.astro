@@ -4,13 +4,13 @@ import Container from "./Container.astro";
 ---
 <Container>
     <div class="flex items-center space-x-3">
-          <img src="/proceso.png" alt="Somos" class="h-12 w-12">
-          <h1 class="text-2xl font-bold text-white">Proceso de trabajo:</h1>
+        <img src="/proceso.png" alt="Somos" class="h-12 w-12">
+        <h1 class="text-2xl font-bold text-white">Proceso de trabajo:</h1>
     </div>
     <p class="my-4 text-lg font-semibold text-black dark:text-white">
         Desde VIOSOMOS implementamos estrategias
-garantizando resultados contrastables en función a
-la necesidad de cada empresa.
+        garantizando resultados contrastables en función a
+        la necesidad de cada empresa.
     </p>
 <div class="grid grid-cols-2 gap-10 mt-10">
     <div>
@@ -23,14 +23,18 @@ la necesidad de cada empresa.
             />
             <!-- Div para el texto con pantalla negra semi-transparente -->
             <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p class="text-white text-center" id="step-description">Descripción del primer paso...</p>
+                <ul style="list-style-type: disc;" class="text-white text-lg font-semibold" id="step-description">
+                    <li>Primeros contactos con el cliente</li>
+                    <li>Diagnóstico y pronóstico preliminar del proyecto</li>
+                    <li>Estimación y Contrato de servicio de consultoría</li>
+                </ul>
             </div>
         </div>
     </div>
     <div>
         <ol class="relative text-gray-500 border-gray-200 dark:border-gray-700 dark:text-gray-400">
             <!-- Primer paso -->
-            <li class="mb-16  step-dot" style="cursor:pointer;">
+            <li class="mb-16 active step-dot" style="cursor:pointer;">
                 <span class="dot absolute flex items-center justify-center w-12 h-12 bg-green-200 rounded-full left-2 top-1 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700 active">
                     <svg class="w-6 h-6 text-gray-500 dark:text-gray-400" version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
@@ -370,37 +374,30 @@ c271 -144 415 -198 635 -236 60 -10 110 -20 113 -23 2 -2 3 -177 2 -389 l-3
         z-index: -1;
     }
 </style>
-<script is:inline>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
-        // Textos para cada paso
-        const stepTexts = [
-            "Primeros contactos con el cliente Diagnóstico y pronóstico preliminar del proyecto Estimación y Contrato de servicio de consultoría",
-            "Análisis del escenario ambiental<br>Análisis de los objetivos del proyecto<br>Aprobación y apoyo total del equipo<br>Información al cliente",
-            "Elaboración de soluciones<br>Evaluación de operaciones<br>Planeación y organización del programa<br>Propuesta al cliente",
-            "Aplicación de métodos de soluciones<br>Propuestas de ajuste",
-            "Evaluación<br>Informe final<br>Planes de seguimiento"
-        ];
-
-        // Configurar el texto inicial del primer paso
-        document.getElementById('step-description').textContent = stepTexts[0];
-
         // Añadir evento de clic a cada dot
         document.querySelectorAll('.step-dot').forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 // Eliminar la clase 'active' de todos los dots y títulos
-                document.querySelectorAll('.step-dot').forEach(d => {
+                document.querySelectorAll('.step-dot, .step-title').forEach(d => {
                     d.classList.remove('active');
-                    d.querySelector('.step-title').classList.remove('active');
                 });
-
+    
                 // Agregar la clase 'active' al dot y al título clickeados
                 dot.classList.add('active');
                 dot.querySelector('.step-title').classList.add('active');
-
-                // Cambiar el texto del overlay según el dot clickeado
-                document.getElementById('step-description').textContent = stepTexts[index];
+    
+                // Cambiar el texto del overlay según el dot clickeado usando innerHTML
+                const stepTexts = [
+                    "<li>Primeros contactos con el cliente</li><li>Diagnóstico y pronóstico preliminar del proyecto</li><li>Estimación y Contrato de servicio de consultoría</li>",
+                    "<li>Análisis del escenario ambiental</li><li>Análisis de los objetivos del proyecto</li><li>Aprobación y apoyo total del equipo</li><li>Información al cliente</li>",
+                    "<li>Elaboración de soluciones</li><li>Evaluación de operaciones</li><li>Planeación y organización del programa</li><li>Propuesta al cliente</li>",
+                    "<li>Aplicación de métodos de soluciones</li><li>Propuestas de ajuste</li>",
+                    "<li>Evaluación</li><li>Informe final</li><li>Planes de seguimiento</li>"
+                ];
+                document.getElementById('step-description').innerHTML = stepTexts[index];
             });
         });
     });
-</script>
-
+    </script>
