@@ -966,5 +966,7 @@ module.exports = {
     'active',
     'disabled',
   ],
-  plugins: [require('flowbite/plugin')],
+  plugins: [
+    require('flowbite/plugin','prettier-plugin-astro'),
+  ],
 }

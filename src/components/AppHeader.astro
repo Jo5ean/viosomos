@@ -1,5 +1,6 @@
 ---
 import Container from "./Container.astro";
+import { Image } from 'astro:assets';
 const links = [
     {
         to: "/#empresa",
@@ -53,7 +54,7 @@ const links = [
             <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4">
                 <div class="relative z-30 flex w-full justify-between md:px-0 lg:w-max">
                     <a href="/#home" aria-label="logo" class="flex items-center space-x-2">
-                        <img class="w-[50px]" src="/viosomos-color2.png" alt="Logo Viosomos">
+                        <Image class="w-[50px]" src="/viosomos-color2.png" alt="Logo Viosomos" width="50" height="50" loading="lazy"/>
                         <span class="text-2xl font-bold text-gray-900 dark:text-white">Viosomos</span>
                     </a>
 
@@ -78,7 +79,7 @@ const links = [
                                 ))
                             }
                             <li>
-                                <a href="#" target="_blank" class="flex gap-2 font-semibold text-black md:text-white transition hover:text-primary  md:px-4">
+                                <a href="/#" target="_blank" class="flex gap-2 font-semibold text-black md:text-white transition hover:text-primary  md:px-4">
                                     <span>Cursos</span>
                                     <span class="flex rounded-full bg-primary/20 px-1.5 py-1 text-xs tracking-wider  dark:bg-white/10 dark:text-orange-300">Nuevo</span>
                                 </a>
