@@ -1,4 +1,4 @@
-<?
+<?php
 require '../helpers/response.helper.php';
 require '../controllers/mail.controllers.php';
 switch ($_SERVER['REQUEST_METHOD']) {

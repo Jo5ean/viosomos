@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
-header('Application: AGV GROUP MAILS');
+header('Application: VIOSOMOS');
 header('Developer: Luis Cruz');
 
 /**
