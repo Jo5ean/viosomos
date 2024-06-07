@@ -2,81 +2,124 @@
 import Container from "./Container.astro";
 ---
 
-<div id="solution" style="background-image: url('./imagen-general.webp'); background-size: cover; background-attachment: fixed;">
-    <Container>
-      <div class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
-        <div class="md:12/12 lg:w-full relative">
-          <div class="p-10" style="background: rgba(0, 0, 0, 0.65);">
-            <div class="flex items-center space-x-3 bg-primary p-3 rounded-tr-full rounded-br-full">
-                <!-- <img src="/servicios.png" alt="Somos" class="h-12 w-12"> -->
-                <h1 class="md:text-2xl text-lg font-bold text-white">Nuestros Servicios:</h1>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 xs:divide-y md:divide-x divide-white">
-            <div class="md:p-3 py-3">
-              <!-- Servicio de Consultoría Geológica -->
-              <div class="flex items-cente p-3">
-                <div class="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                    <img src="/icono-geologia.png" alt="Geología" class="w-6 h-6">
-                </div>
-                <div class="ml-4 text-white">
-                    <h3 class="font-semibold text-lg">Consultoría</h3>
-                    <h3 class="font-semibold text-lg">Geológica</h3>
-                </div>
-            </div>
-            <ul class="list-none pl-16 mt-2 text-white">
-                <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Exploración geológica</li>
-                <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Estudios hidrogeológicos</li>
-                <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Perfiles eléctricos de pozos</li>
-                <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Estudios geotécnicos</li>
-                <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Estudios de riesgo y peligrosidad</li>
-                <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Cartografía y SIG</li>
-                <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Levantamiento topográfico</li>
-                <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Análisis de laboratorio</li>
-            </ul>
-            </div>
-            <div class="md:p-3 py-3">
-                <!-- Servicio de Cs de Datos -->
-                <div class="flex items-center p-3">
-                    <div class="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                        <img src="/icono-ambiental.png" alt="Ambiental" class="w-6 h-6">
+<div id="services" style="background-image: url('./imagen-general.webp'); background-size: cover; background-attachment: fixed; min-height: 50vh; position: relative; overflow: hidden;">
+    <div style="background: rgba(0, 0, 0, 0.65); width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+    </div>
+    <Container style="position: relative; z-index: 1;">
+        <div class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+            <div class="md:12/12 lg:w-full relative">
+                <div class="py-10">
+                    <div class="flex items-center space-x-3 bg-primary py-2 px-4 rounded-sm">
+                        <!-- <img src="/servicios.png" alt="Somos" class="h-12 w-12"> -->
+                        <h1 class="md:text-2xl text-lg font-bold text-white">Nuestros
+                            servicios:</h1>
                     </div>
-                    <div class="ml-4 text-white">
-                        <h3 class="font-semibold text-lg">Consultoría</h3>
-                        <h3 class="font-semibold text-lg">Ciencias de Datos Aplicada</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 xs:divide-y md:divide-x divide-white">
+                        <div class="md:p-3 py-3">
+                            <!-- Servicio de Consultoría Geológica -->
+                            <div class="flex items-cente p-3">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-[#00CB85] rounded-full flex items-center justify-center">
+                                    <img src="/icono-geologia.png" alt="Geología" class="w-6 h-6 invert font-bold">
+                                </div>
+                                <div class="ml-4 text-white">
+                                    <h3 class="font-semibold text-lg">Consultoría</h3>
+                                    <h3 class="font-semibold text-lg">Geológica</h3>
+                                </div>
+                            </div>
+                            <ul class="list-none pl-16 mt-2 text-white">
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#00CB85] before:w-3 before:h-3 before:rounded-full">
+                                    Exploración geológica</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#00CB85] before:w-3 before:h-3 before:rounded-full">
+                                    Estudios hidrogeológicos</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#00CB85] before:w-3 before:h-3 before:rounded-full">
+                                    Perfiles eléctricos de pozos</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#00CB85] before:w-3 before:h-3 before:rounded-full">
+                                    Estudios geotécnicos</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#00CB85] before:w-3 before:h-3 before:rounded-full">
+                                    Estudios de riesgo y peligrosidad</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#00CB85] before:w-3 before:h-3 before:rounded-full">
+                                    Cartografía y SIG</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#00CB85] before:w-3 before:h-3 before:rounded-full">
+                                    Levantamiento topográfico</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#00CB85] before:w-3 before:h-3 before:rounded-full">
+                                    Análisis de laboratorio</li>
+                            </ul>
+                        </div>
+                        <div class="md:p-3 py-3">
+                            <!-- Servicio de Cs de Datos -->
+                            <div class="flex items-center p-3">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-[#99CC33] rounded-full flex items-center justify-center">
+                                    <img src="/icono-ambiental.png" alt="Ambiental" class="w-6 h-6 invert font-bold">
+                                </div>
+                                <div class="ml-4 text-white">
+                                    <h3 class="font-semibold text-lg">Consultoría</h3>
+                                    <h3 class="font-semibold text-lg">Ambiental</h3>
+                                </div>
+                            </div>
+                            <ul class="list-none pl-16 mt-2 text-white">
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#99CC33] before:w-3 before:h-3 before:rounded-full">
+                                    Estudios ambientales y sociales</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#99CC33] before:w-3 before:h-3 before:rounded-full">
+                                    Gestión de residuos</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#99CC33] before:w-3 before:h-3 before:rounded-full">
+                                    Técnicas de remediación ambiental</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#99CC33] before:w-3 before:h-3 before:rounded-full">
+                                    Plan de monitoreo ambiental</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#99CC33] before:w-3 before:h-3 before:rounded-full">
+                                    Educación ambiental y sensibilización</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#99CC33] before:w-3 before:h-3 before:rounded-full">
+                                    Eficiencia energética y energías renovables</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#99CC33] before:w-3 before:h-3 before:rounded-full">
+                                    Planes de gestión sostenibles (ESC)</li>
+                            </ul>                           
+                        </div>
+                        <div class="md:p-3 py-3">
+                            <!-- Servicio de Consultoría Ambiental -->
+                            <div class="flex items-center p-3">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-[#4e5e9c] rounded-full flex items-center justify-center">
+                                    <img src="/icono-cs-datos.png" alt="Ciencia de Datos" class="w-6 h-6 invert font-bold">
+                                </div>
+                                <div class="ml-4 text-white">
+                                    <h3 class="font-semibold text-lg">Consultoría</h3>
+                                    <h3 class="font-semibold text-lg">Ciencias de Datos Aplicada</h3>
+                                </div>   
+                            </div>
+                            <ul class="list-none pl-16 mt-2 text-white">
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#4e5e9c] before:w-3 before:h-3 before:rounded-full">
+                                    Modelado de yacimientos</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#4e5e9c] before:w-3 before:h-3 before:rounded-full">
+                                    Optimización de la exploración y producción</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#4e5e9c] before:w-3 before:h-3 before:rounded-full">
+                                    Evaluación de riesgos geológicos</li>
+                                <li
+                                    class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-[#4e5e9c] before:w-3 before:h-3 before:rounded-full">
+                                    Monitoreo ambiental</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <ul class="list-none pl-16 mt-2 text-white">
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Modelado de yacimientos</li>
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Optimización de la exploración y producción</li>
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Evaluación de riesgos geológicos</li>
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Monitoreo ambiental</li>
-                </ul>
             </div>
-            <div class="md:p-3 py-3">
-                <!-- Servicio de Consultoría Ambiental -->
-                <div class="flex items-center p-3">
-                    <div class="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                        <img src="/icono-cs-datos.png" alt="Ciencia de Datos" class="w-6 h-6">
-                    </div>
-                    <div class="ml-4 text-white">
-                        <h3 class="font-semibold text-lg">Consultoría</h3>
-                        <h3 class="font-semibold text-lg">Ambiental</h3>
-                    </div>
-                </div>
-                <ul class="list-none pl-16 mt-2 text-white">
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Estudios ambientales y sociales</li>
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Gestión de residuos</li>
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Técnicas de remediación ambiental</li>
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Plan de monitoreo ambiental</li>
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Educación ambiental y sensibilización</li>
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Eficiencia energética y energías renovables</li>
-                    <li class="relative pl-4 before:absolute before:top-1/2 before:-left-8 before:-translate-y-1/2 before:bg-primary before:w-4 before:h-4 before:rounded-full">Planes de gestión sostenibles (ESC)</li>
-                </ul>
-            </div>
-            </div>
-          </div>
-          </div>
         </div>
-      </div>
     </Container>
 </div>

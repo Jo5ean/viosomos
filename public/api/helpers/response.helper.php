@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 header('Application: VIOSOMOS');
-header('Developer: Luis Cruz');
+header('Developer: ');
 
 /**
  * Muestra todos los datos de una colección como JSON
