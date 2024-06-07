@@ -40,48 +40,41 @@ import Container from "./Container.astro"
         </div>
     </div>
     
-    
-      <!-- Segunda columna con formulario -->
-      <div class="flex items-center justify-center p-4">
-        <form role="form" id="pedidoinfo" method="post" enctype="multipart/form-data" action="/postulantes_mail1.php" autocomplete="on"
-      class="bg-[#0E3940] rounded-lg p-3 m-1 w-11/12 sm:max-w-md"
-      style="box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
-    <h2 class="text-lg font-semibold mb-3 text-center text-white">Obtenga Asesoramiento</h2>
-    
-    <!-- Campos del formulario -->
-    <div class="mb-3">
-        <label for="nombre" class="block text-sm font-medium text-white">Nombre y Apellido*</label>
-        <input type="text" name="nombre" id="nombre" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50" />
-    </div>
+    <div class="flex items-center justify-center p-4">
+  <form role="form" id="form-contact" autocomplete="on"
+class="bg-[#0E3940] rounded-lg p-3 m-1 w-11/12 sm:max-w-md"
+style="box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+<h2 class="text-lg font-semibold mb-3 text-center text-white">Obtenga Asesoramiento</h2>
 
-    <div class="mb-3">
-        <label for="email" class="block text-sm font-medium text-white">E-mail*</label>
-        <input type="email" name="email" id="email" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50" />
-    </div>
+<!-- Campos del formulario -->
+<div class="mb-3">
+  <label for="name" class="block text-sm font-medium text-white">Nombre y Apellido*</label>
+  <input type="text" name="name" id="name" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50" />
+</div>
 
-    <div class="mb-3">
-        <label for="telefono" class="block text-sm font-medium text-white">Teléfono/celular*</label>
-        <input type="text" name="telefono" id="telefono" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50" />
-    </div>
+<div class="mb-3">
+  <label for="email" class="block text-sm font-medium text-white">E-mail*</label>
+  <input type="email" name="email" id="email" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50" />
+</div>
 
-    <div class="mb-3">
-        <label for="asunto" class="block text-sm font-medium text-white">Asunto*</label>
-        <input type="text" name="asunto" id="asunto" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50" />
-    </div>
+<div class="mb-3">
+  <label for="phone" class="block text-sm font-medium text-white">Teléfono/celular*</label>
+  <input type="text" name="phone" id="phone" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50" />
+</div>
 
-    <div class="mb-3">
-        <label for="mensaje" class="block text-sm font-medium text-white">Mensaje*</label>
-        <textarea name="mensaje" id="mensaje" rows="2" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50"></textarea>
-    </div>
+<div class="mb-3">
+  <label for="message" class="block text-sm font-medium text-white">Mensaje*</label>
+  <textarea name="message" id="message" rows="2" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50"></textarea>
+</div>
 
-    <div class="flex justify-center mt-3">
-        <button type="submit" class="px-6 py-2 bg-secondary hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 text-white font-medium rounded-full transition duration-300">
-            Enviar mensaje
-        </button>
-    </div>
+<div class="flex justify-center mt-3">
+  <button type="submit" class="px-6 py-2 bg-secondary hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 text-white font-medium rounded-full transition duration-300">
+      Enviar mensaje
+  </button>
+</div>
 </form>
+</div>
 
-    </div>
     
     
   </div>
@@ -211,3 +204,35 @@ import Container from "./Container.astro"
     </div> -->
   </Container>
 </div>
+
+<script is:inline>
+  const form = document.getElementById("form-contact");
+  form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const name = this.querySelector("#name").value;
+      const email = this.querySelector("#email").value;
+      const phone = this.querySelector("#phone").value;
+      const message = this.querySelector("#message").value;
+      const data = {
+          name,
+          email,
+          phone,
+          message,
+      };
+      const response = await fetch('/api/routes/mail.routes.php', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: data,
+      }).then((res) => res.json());
+      console.log({ response });
+      if (response.success) {
+          alert(response.message);
+          form.reset();
+      } else {
+          alert(response.message);
+      }
+  });
+  </script>
+  

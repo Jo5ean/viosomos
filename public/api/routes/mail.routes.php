@@ -30,7 +30,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $email = $_POST['email'];
             $phone = $_POST['phone'];
             $message = $_POST['message'];
-            $receiver = 'luiscruzz.salta@gmail.com';
+            $receiver = 'josean.urbani@gmail.com';
             if (isset($_POST['to']) && !empty($_POST['to'])) {
                 $receiver = $_POST['to'];
             }
