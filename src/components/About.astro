@@ -1,5 +1,6 @@
 ---
-import Container from "./Container.astro"
+import ContactForm from "./ContactForm.astro";
+import Container from "./Container.astro";
 ---
 
 <div id="empresa">
@@ -7,80 +8,50 @@ import Container from "./Container.astro"
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <!-- Primera columna con imagen, título y texto -->
       <div class="px-4 text-lg font-medium text-black dark:text-white">
-        <div class="flex items-center space-x-3 bg-primary p-3 rounded-tr-full rounded-br-full">
-            <!-- <img src="/somos.png" alt="Somos" class="h-12 w-12"> -->
-            <h1 class="text-2xl font-bold text-white">Quienes somos:</h1>
+        <div
+          class="flex items-center space-x-3 bg-primary p-3 rounded-tr-full rounded-br-full"
+        >
+          <!-- <img src="/somos.png" alt="Somos" class="h-12 w-12"> -->
+          <h1 class="text-2xl font-bold text-white">Quienes somos:</h1>
         </div>
         <p class="mt-4">
-            Somos una asociación de profesionales, conformamos un equipo
-            interdisciplinario pro activo y altamente calificado.
+          Somos una asociación de profesionales, conformamos un equipo
+          interdisciplinario pro activo y altamente calificado.
         </p>
         <p class="mt-2">
-            Nuestra consultora tiene como objetivo crear soluciones a las
-            necesidades empresariales y emprendimientos de diferentes
-            actividades. Nos actualizamos constantemente para brindar
-            herramientas y soluciones múltiples con resultados eficaces y eficientes.
+          Nuestra consultora tiene como objetivo crear soluciones a las
+          necesidades empresariales y emprendimientos de diferentes actividades.
+          Nos actualizamos constantemente para brindar herramientas y soluciones
+          múltiples con resultados eficaces y eficientes.
         </p>
         <p class="mt-2">
-            Estamos comprometidos profesionalmente con la responsabilidad social
-            y la sustentabilidad del medio ambiente (desarrollo sostenible).
+          Estamos comprometidos profesionalmente con la responsabilidad social y
+          la sustentabilidad del medio ambiente (desarrollo sostenible).
         </p>
         <!-- Componente de contacto con teléfono en dos columnas -->
         <div class="flex items-center mt-5 lg:mt-20 p-2 border-t-2">
-            <div class="flex items-center space-x-2">
-              <img src="/hablando.png" alt="hablando" class="h-10 w-10">
+          <div class="flex items-center space-x-2">
+            <img src="/hablando.png" alt="hablando" class="h-10 w-10" />
+          </div>
+          <div class="ml-4">
+            <div class="text-primary lg:text-lg text-sm">
+              A Su Disposición Para Asesorarlo
             </div>
-            <div class="ml-4">
-                <div class="text-primary lg:text-lg text-sm">A Su Disposición Para Asesorarlo</div>
-                <div class="text-black dark:text-white lg:text-xl text-base">+54 9 387 412 8389</div>
-                <a href="mailto:franqui@viosomos.com" class="text-black dark:text-white lg:text-xl text-base">
-                  franqui@viosomos.com
-              </a>
+            <div class="text-black dark:text-white lg:text-xl text-base">
+              +54 9 387 412 8389
             </div>
+            <a
+              href="mailto:franqui@viosomos.com"
+              class="text-black dark:text-white lg:text-xl text-base"
+            >
+              franqui@viosomos.com
+            </a>
+          </div>
         </div>
+      </div>
+
+      <ContactForm />
     </div>
-    
-    <div class="flex items-center justify-center p-4">
-  <form role="form" id="form-contact" autocomplete="on"
-class="bg-[#0E3940] rounded-lg p-3 m-1 w-11/12 sm:max-w-md"
-style="box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
-<h2 class="text-lg font-semibold mb-3 text-center text-white">Obtenga Asesoramiento</h2>
-
-<!-- Campos del formulario -->
-<div class="mb-3">
-  <label for="name" class="block text-sm font-medium text-white">Nombre y Apellido*</label>
-  <input type="text" name="name" id="name" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50" />
-</div>
-
-<div class="mb-3">
-  <label for="email" class="block text-sm font-medium text-white">E-mail*</label>
-  <input type="email" name="email" id="email" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50" />
-</div>
-
-<div class="mb-3">
-  <label for="phone" class="block text-sm font-medium text-white">Teléfono/celular*</label>
-  <input type="text" name="phone" id="phone" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50" />
-</div>
-
-<div class="mb-3">
-  <label for="message" class="block text-sm font-medium text-white">Mensaje*</label>
-  <textarea name="message" id="message" rows="2" required class="mt-1 p-2 w-full border border-gray-200 rounded-md focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50"></textarea>
-</div>
-
-<div class="flex justify-center mt-3">
-  <button type="submit" class="px-6 py-2 bg-secondary hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 text-white font-medium rounded-full transition duration-300">
-      Enviar mensaje
-  </button>
-</div>
-</form>
-</div>
-
-    
-    
-  </div>
-  
-  
-    
 
     <!-- <div
       class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4"
@@ -204,35 +175,3 @@ style="box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
     </div> -->
   </Container>
 </div>
-
-<script is:inline>
-  const form = document.getElementById("form-contact");
-  form.addEventListener("submit", async function (event) {
-      event.preventDefault();
-      const name = this.querySelector("#name").value;
-      const email = this.querySelector("#email").value;
-      const phone = this.querySelector("#phone").value;
-      const message = this.querySelector("#message").value;
-      const data = {
-          name,
-          email,
-          phone,
-          message,
-      };
-      const response = await fetch('/api/routes/mail.routes.php', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: data,
-      }).then((res) => res.json());
-      console.log({ response });
-      if (response.success) {
-          alert(response.message);
-          form.reset();
-      } else {
-          alert(response.message);
-      }
-  });
-  </script>
-  
