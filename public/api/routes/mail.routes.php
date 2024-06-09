@@ -30,7 +30,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $email = $_POST['email'];
             $phone = $_POST['phone'];
             $message = $_POST['message'];
-            $receiver = 'josean.urbani@gmail.com';
+            $receiver = 'viosomos@gmail.com';
             if (isset($_POST['to']) && !empty($_POST['to'])) {
                 $receiver = $_POST['to'];
             }
@@ -38,7 +38,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $subject = 'Nuevo formulario de contacto recibido en la web';
 
             $content = '
-                <h2>Nuevo contacto recibido en la web</h2>
+                <h2>Nuevo contacto recibido desde la web</h2>
                 <h3>Datos recopilados</h3>
                 <table>
                     <tr>
