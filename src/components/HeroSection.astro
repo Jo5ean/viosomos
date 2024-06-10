@@ -33,20 +33,20 @@ import Container from "./Container.astro"
                 </a>
               </div>
               
-              <div class="hidden py-8 mt-16 border-y  border-gray-100 sm:grid grid-cols-3">
+              <div class="hidden py-8 mt-16 border-y border-gray-100 lg:grid grid-cols-3 responsive-height">
                 <div class="text-center">
-                    <img src="/icono-geologia.png" alt="Geología" class="h-16 w-auto mx-auto filter invert">
-                    <h6 class="text-center text-lg font-semibold text-white mt-5">Consultoría y <br>Servicios Geológicos</h6>
+                    <img src="/icono-geologia.png" alt="Geología" class="sm:h-16 h-5 w-auto mx-auto filter invert">
+                    <h6 class="text-center text-sm lg:text-lg font-semibold text-white mt-5">Consultoría y <br>Servicios Geológicos</h6>
                     
                 </div>
                 <div class="text-center">
-                    <img src="/icono-ambiental.png" alt="Ambiental" class="h-16 w-auto mx-auto filter invert">
-                    <h6 class="text-center text-lg font-semibold text-white mt-5">Consultoría y <br>Servicios Ambientales</h6>
+                    <img src="/icono-ambiental.png" alt="Ambiental" class="sm:h-16 h-5 w-auto mx-auto filter invert">
+                    <h6 class="text-center text-sm lg:text-lg font-semibold text-white mt-5">Consultoría y <br>Servicios Ambientales</h6>
                    
                 </div>
                 <div class="text-center">
-                    <img src="/icono-cs-datos.png" alt="Ciencia de Datos" class="h-16 w-auto mx-auto filter invert">
-                    <h6 class="text-center text-lg font-semibold text-white mt-5">Consultoría y <br>Servicios en Ciencia de Datos</h6>
+                    <img src="/icono-cs-datos.png" alt="Ciencia de Datos" class="sm:h-16 h-5 w-auto mx-auto filter invert">
+                    <h6 class="text-center text-sm lg:text-lg font-semibold text-white mt-5">Consultoría y <br>Servicios en Ciencia de Datos</h6>
                    
                 </div>
             </div>
@@ -54,3 +54,10 @@ import Container from "./Container.astro"
         </div>
     </Container>
 </div>
+<style is:inline>
+  @media (max-height: 800px) {
+    .responsive-height {
+      display: none;
+    }
+  }
+  </style>

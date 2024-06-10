@@ -2,16 +2,11 @@
 import ContactForm from "./ContactForm.astro";
 import Container from "./Container.astro";
 ---
-
 <div id="empresa">
   <Container>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <!-- Primera columna con imagen, título y texto -->
       <div class="px-4 text-lg font-medium text-white">
-        <div
-          class="flex items-center space-x-3  bg-primary px-4 py-2 rounded-sm"
-        >
-          <!-- <img src="/somos.png" alt="Somos" class="h-12 w-12"> -->
+        <div class="flex items-center space-x-3  bg-primary px-4 py-2 rounded-sm">
           <h1 class="text-2xl font-bold text-white">Quienes somos:</h1>
         </div>
         <p class="mt-4">
@@ -28,8 +23,7 @@ import Container from "./Container.astro";
           Estamos comprometidos profesionalmente con la responsabilidad social y
           la sustentabilidad del medio ambiente (desarrollo sostenible).
         </p>
-        <!-- Componente de contacto con teléfono en dos columnas -->
-        <div class="flex items-center mt-5 lg:mt-20 p-2 border-t-2">
+        <div class="flex items-center mt-5 lg:mt-20 p-2 border-t-2" id="empresaMobile">
           <div class="flex items-center space-x-2">
             <img src="/hablando.png" alt="hablando" class="h-10 w-10" />
           </div>
@@ -40,138 +34,13 @@ import Container from "./Container.astro";
             <div class="text-white lg:text-xl text-base">
               +54 9 387 222 8085
             </div>
-            <a
-              href="mailto:viosomos@gmail.com"
-              class="text-white lg:text-xl text-base"
-            >
+            <a href="mailto:viosomos@gmail.com" class="text-white lg:text-xl text-base">
             viosomos@gmail.com
             </a>
           </div>
         </div>
       </div>
-
       <ContactForm />
     </div>
-
-    <!-- <div
-      class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4"
-    >
-      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png"
-            class="w-12"
-            width="512"
-            height="512"
-            alt="burger illustration"
-          />
-
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              First feature
-            </h5>
-            <p class="text-gray-600 dark:text-white">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
-        </div>
-      </div>
-      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341134.png"
-            class="w-12"
-            width="512"
-            height="512"
-            alt="burger illustration"
-          />
-
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              Second feature
-            </h5>
-            <p class="text-gray-600 dark:text-white">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
-        </div>
-      </div>
-      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png"
-            class="w-12"
-            width="512"
-            height="512"
-            alt="burger illustration"
-          />
-
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              Third feature
-            </h5>
-            <p class="text-gray-600 dark:text-white">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
-        </div>
-      </div>
-      <div
-        class="group relative bg-gray-50 dark:bg-gray-900 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
-      >
-        <div
-          class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341025.png"
-            class="w-12"
-            width="512"
-            height="512"
-            alt="burger illustration"
-          />
-
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              More features
-            </h5>
-            <p class="text-gray-600 dark:text-white">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
-        </div>
-      </div>
-    </div> -->
   </Container>
 </div>
